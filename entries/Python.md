@@ -1,0 +1,1 @@
+Python can be used on a server to create web applications.
