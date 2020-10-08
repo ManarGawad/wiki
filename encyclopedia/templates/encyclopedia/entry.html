@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+  {% if content %}
+    {{ entry }}
+  {% else %}
+    Error
+  {% endif %}
+{% endblock %}
+
+{% block body %}
+
+  {% if content %}
+    <p>{{ content }}</p>
+  {% else %}
+   <p>The requested page was not found.</p>
+  {% endif %}
+
+  <div class="row d-flex align-items-end h-75">
+    <a href="{% url 'edit_page' entry %}" type="button" class="text-light btn btn-secondary offset-10">Edit page</a>
+  </div>
+
+{% endblock %}
